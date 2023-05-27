@@ -2,6 +2,7 @@
   "name": "diagnal",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://simranjeet-payufin.github.io/diagnal",
   "dependencies": {
     "@reduxjs/toolkit": "1.8.5",
     "@testing-library/jest-dom": "5.16.5",
@@ -74,12 +75,11 @@
     "lint:fix": "yarn run eslint --fix src",
     "lint:css": "stylelint src/**/*.css",
     "generate": "plop --plopfile internals/generators/plopfile.ts",
-    "cleanAndSetup": "ts-node ./internals/scripts/clean.ts",
     "prettify": "prettier --write",
-    "extract-messages": "i18next-scanner --config=internals/extractMessages/i18next-scanner.config.js"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "extract-messages": "i18next-scanner --config=internals/extractMessages/i18next-scanner.config.js",
+    "prepare": "husky install",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
@@ -121,5 +121,11 @@
         "statements": 90
       }
     }
+  },
+  "devDependencies": {
+    "autoprefixer": "10.4.14",
+    "gh-pages": "5.0.0",
+    "postcss": "8.4.23",
+    "tailwindcss": "3.3.2"
   }
 }
