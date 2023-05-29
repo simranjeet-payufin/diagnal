@@ -13,7 +13,7 @@ import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 
 // Use consistent styling
-import 'sanitize.css/sanitize.css';
+// import 'sanitize.css/sanitize.css';
 
 import './index.css';
 
